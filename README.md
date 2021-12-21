@@ -14,6 +14,7 @@ for (i, ti) in Iterators.enumerate(Tf)
 end
 p
 ```
+![Truncated fourier serie interpolation](./fc1.png)
 ```
 g = Gibbs_FC(y) # Fourier serie interpolation will suffer from gibbs ringing
 f = Hermite_FC(y, 15, 1)
@@ -22,3 +23,4 @@ plot!(p, range(0.0, 1.0; length = 16 * 1024), g; label = "Fourier", linewidth = 
 plot!(p, range(0.0, 1.0; length = 16 * 1024), f; label = "Fourier continuation", linewidth = 2)
 p
 ```
+![Gibbs ringing](./fc2.png)
